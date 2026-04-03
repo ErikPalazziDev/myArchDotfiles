@@ -5,7 +5,6 @@
     font-family: "CaskaydiaCove Nerd Font Propo", "JetBrainsMono Nerd Font Propo", "Noto Sans CJK JP", "Noto Sans CJK KR";
     font-size: 14px;
     font-weight: 800;
-    color: @fg;
 }
 
 tooltip {
@@ -16,9 +15,9 @@ tooltip {
     border-radius: 8px;
 }
 
-.modules-left, .modules-center {
+.modules-left, .modules-center, .modules-right {
     background-color: @bg0;
-    padding: 2px 12px;
+    padding: 2px 16px;
     border-radius: 99px;
     border: 1px @bg3 solid;
 }
@@ -28,12 +27,14 @@ tooltip {
     color: @fg;
 }
 
-#clock {
-    font-weight: 800;
+.modules-right {
+    margin-right: 16px;
+    color: @fg;
 }
 
-#workpaces {
-    background-color: @green;
+
+#clock {
+    font-weight: 800;
 }
 
 #workspaces button {
@@ -52,6 +53,10 @@ tooltip {
     min-width: 1.25rem;
     font-weight: 500;
     border: 1px @purple solid;
+}
+
+#workspaces button.empty {
+    color: @grey0;
 }
 
 #battery {
@@ -102,8 +107,18 @@ tooltip {
     margin: 0 16px;
 }
 
-#pulseaudio {
-    min-width: 0;
-    padding: 0 8px 0 0;
+#memory {
+    padding-left: 8px;
 }
+
+#temperature {
+    margin-right: 8px;
+    margin-left: -8px;
+}
+
+
+
+
+
+
 
