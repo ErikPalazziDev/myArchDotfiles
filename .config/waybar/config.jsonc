@@ -2,7 +2,9 @@
 {
     "margin-top": 8,
     "position": "top",
-    "modules-left": [],
+    "modules-left": [
+        "custom/media"
+    ],
     "modules-center": [
         "clock",
         "hyprland/workspaces",
@@ -15,6 +17,17 @@
         "custom/notification"
     ],
     "modules-right": [],
+    "custom/media": {
+        "format": " 󰝚  {icon} {text} ",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": " ",
+            "Paused": " " 
+        },
+        "max-length": 50,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause"
+    },
     "clock": {
         "interval": 60,
         "tooltip": true,
